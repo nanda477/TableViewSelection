@@ -13,11 +13,10 @@ class SelectionTableVC: UITableViewController {
     var data = [["iPhone"],["iPad"],["iMac"]]
     var selectedRow = 99999 // some over index
     var selectedSection = 99999 // some over index
-    @IBOutlet weak var continueButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Purchase"
-        continueButton.isHidden = true
     }
 
     // MARK: - Table view data source
@@ -41,8 +40,12 @@ class SelectionTableVC: UITableViewController {
         
         if selectedSection == indexPath.section && self.selectedRow == indexPath.row {
             cell.accessoryType = .checkmark
-            continueButton.setTitle("Continue  " + data[indexPath.section][indexPath.row], for: .normal)
+            cell.paybtnHeightConstraint.constant = 30
+            cell.payBtn.tag = indexPath.section
+            cell.payBtn.setTitle("Continue  " + data[indexPath.section][indexPath.row], for: .normal)
+            cell.payBtn.addTarget(self, action: #selector(payAction(sender:)), for: .touchUpInside)
         }else{
+            cell.paybtnHeightConstraint.constant = 0
             cell.accessoryType = .disclosureIndicator
         }
      
@@ -53,7 +56,6 @@ class SelectionTableVC: UITableViewController {
         
         selectedSection = indexPath.section
         selectedRow = indexPath.row
-        continueButton.isHidden = false
         tableView.reloadData()
     }
     
@@ -72,5 +74,24 @@ class SelectionTableVC: UITableViewController {
         return 10
     }
 
+    
+    @objc func payAction(sender: UIButton) {
+        
+        switch sender.tag {
+        case 0:
+            let vc = storyboard?.instantiateViewController(withIdentifier: "IPhoneVC_ID") as! IPhoneVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        case 1:
+              let vc = storyboard?.instantiateViewController(withIdentifier: "IPadVc_ID") as! IPadVc
+              self.navigationController?.pushViewController(vc, animated: true)
+        case 2:
+              let vc = storyboard?.instantiateViewController(withIdentifier: "IMacVC_ID") as! IMacVC
+              self.navigationController?.pushViewController(vc, animated: true)
+            
+        default:
+            print("none")
+        }
+        
+    }
 
 }

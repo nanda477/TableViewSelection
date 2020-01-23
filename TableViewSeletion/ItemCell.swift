@@ -10,8 +10,10 @@ import UIKit
 
 class ItemCell: UITableViewCell {
 
+    @IBOutlet weak var paybtnHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var payBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

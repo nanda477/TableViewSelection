@@ -13,6 +13,9 @@
 		1499032E232A5F55005F91C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1499032C232A5F55005F91C3 /* LaunchScreen.storyboard */; };
 		14990338232A61BC005F91C3 /* SelectionTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14990337232A61BC005F91C3 /* SelectionTableVC.swift */; };
 		1499033A232A63F5005F91C3 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14990339232A63F5005F91C3 /* ItemCell.swift */; };
+		D4FD333223D9A90000825DD3 /* IPhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD333123D9A8FF00825DD3 /* IPhoneVC.swift */; };
+		D4FD333423D9A91A00825DD3 /* IPadVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD333323D9A91A00825DD3 /* IPadVc.swift */; };
+		D4FD333623D9A93900825DD3 /* IMacVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD333523D9A93900825DD3 /* IMacVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		1499032F232A5F55005F91C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14990337232A61BC005F91C3 /* SelectionTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTableVC.swift; sourceTree = "<group>"; };
 		14990339232A63F5005F91C3 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		D4FD333123D9A8FF00825DD3 /* IPhoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPhoneVC.swift; sourceTree = "<group>"; };
+		D4FD333323D9A91A00825DD3 /* IPadVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPadVc.swift; sourceTree = "<group>"; };
+		D4FD333523D9A93900825DD3 /* IMacVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMacVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			children = (
 				14990323232A5F41005F91C3 /* AppDelegate.swift */,
 				14990337232A61BC005F91C3 /* SelectionTableVC.swift */,
+				D4FD333523D9A93900825DD3 /* IMacVC.swift */,
+				D4FD333323D9A91A00825DD3 /* IPadVc.swift */,
+				D4FD333123D9A8FF00825DD3 /* IPhoneVC.swift */,
 				14990339232A63F5005F91C3 /* ItemCell.swift */,
 				14990327232A5F41005F91C3 /* Main.storyboard */,
 				1499032A232A5F55005F91C3 /* Assets.xcassets */,
@@ -139,8 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				14990338232A61BC005F91C3 /* SelectionTableVC.swift in Sources */,
+				D4FD333223D9A90000825DD3 /* IPhoneVC.swift in Sources */,
+				D4FD333623D9A93900825DD3 /* IMacVC.swift in Sources */,
 				14990324232A5F41005F91C3 /* AppDelegate.swift in Sources */,
 				1499033A232A63F5005F91C3 /* ItemCell.swift in Sources */,
+				D4FD333423D9A91A00825DD3 /* IPadVc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
